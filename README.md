@@ -2,7 +2,7 @@
 
 My portfolio, live at https://ritanol.github.io
 
-Built from [wendoj/developer-portfolio](https://github.com/wendoj/developer-portfolio) (MIT, see `LICENSE.md`) with Next.js, Tailwind and Framer Motion, exported as a static site and deployed to GitHub Pages via Actions.
+Built with Next.js, exported as a static site and deployed to GitHub Pages via Actions. Started from [wendoj/developer-portfolio](https://github.com/wendoj/developer-portfolio) (MIT, see `LICENSE.md`).
 
 ```bash
 pnpm install
