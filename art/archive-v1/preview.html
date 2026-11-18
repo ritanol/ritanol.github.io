@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ritanol pixel asset preview</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px;
+      color: #fff;
+      background: #0a0818;
+      font: 16px/1.4 monospace;
+    }
+    h1 { margin: 0 0 8px; color: #3de8d0; }
+    p { margin: 0 0 24px; color: #cbb4ff; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; }
+    figure {
+      margin: 0;
+      min-width: 0;
+      padding: 16px;
+      overflow: auto;
+      border: 4px double #fff;
+      background-color: #1a1450;
+      background-image:
+        linear-gradient(45deg, #241a6b 25%, transparent 25%),
+        linear-gradient(-45deg, #241a6b 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #241a6b 75%),
+        linear-gradient(-45deg, transparent 75%, #241a6b 75%);
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+      background-size: 16px 16px;
+    }
+    figcaption { position: sticky; left: 0; margin-bottom: 12px; color: #ffe94a; }
+    img { display: block; max-width: none; image-rendering: pixelated; image-rendering: crisp-edges; }
+    .wide { grid-column: 1 / -1; max-height: 700px; }
+    .walk-window {
+      width: 128px;
+      height: 192px;
+      background: url('./hero-walk.png') 0 0 / 512px 192px no-repeat;
+      image-rendering: pixelated;
+      animation: walk 0.8s steps(4) infinite;
+    }
+    @keyframes walk { to { background-position-x: -512px; } }
+    .sheet { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>ritanol pixel assets</h1>
+  <p>All assets shown at exactly 4× with nearest-neighbor browser scaling.</p>
+  <main class="grid">
+    <figure><figcaption>hero-idle.png — 32×48</figcaption><img src="./hero-idle.png" width="128" height="192" alt="Hero idle sprite"></figure>
+    <figure>
+      <figcaption>hero-walk.png — 128×48, animated in four 32×48 frames</figcaption>
+      <div class="walk-window" role="img" aria-label="Animated four-frame hero walk cycle"></div>
+      <img class="sheet" src="./hero-walk.png" width="512" height="192" alt="Full hero walk sprite sheet">
+    </figure>
+    <figure><figcaption>hero-portrait.png — 48×48</figcaption><img src="./hero-portrait.png" width="192" height="192" alt="Neutral hero portrait"></figure>
+    <figure><figcaption>hero-portrait-smile.png — 48×48</figcaption><img src="./hero-portrait-smile.png" width="192" height="192" alt="Smiling hero portrait"></figure>
+    <figure><figcaption>icon-soul-jump.png — 32×32</figcaption><img src="./icon-soul-jump.png" width="128" height="128" alt="Jumping soul icon"></figure>
+    <figure><figcaption>icon-super-fun-game.png — 32×32</figcaption><img src="./icon-super-fun-game.png" width="128" height="128" alt="Golden star icon"></figure>
+    <figure><figcaption>icon-harness.png — 32×32</figcaption><img src="./icon-harness.png" width="128" height="128" alt="Robot helper icon"></figure>
+    <figure><figcaption>save-point.png — 96×32, three frames</figcaption><img src="./save-point.png" width="384" height="128" alt="Save point sprite sheet"></figure>
+    <figure class="wide"><figcaption>bg-city-night.png — 480×270</figcaption><img src="./bg-city-night.png" width="1920" height="1080" alt="Night city background"></figure>
+    <figure class="wide"><figcaption>bg-city-far.png — 480×270</figcaption><img src="./bg-city-far.png" width="1920" height="1080" alt="Transparent distant city layer"></figure>
+    <figure><figcaption>moon.png — 48×48</figcaption><img src="./moon.png" width="192" height="192" alt="Pixel moon"></figure>
+    <figure><figcaption>tile-dark-world.png — 32×32 seamless tile</figcaption><img src="./tile-dark-world.png" width="128" height="128" alt="Dark floor tile"></figure>
+    <figure><figcaption>tile-stars.png — 128×128 seamless tile</figcaption><img src="./tile-stars.png" width="512" height="512" alt="Transparent starfield tile"></figure>
+    <figure><figcaption>ornament-corner.png — 16×16</figcaption><img src="./ornament-corner.png" width="64" height="64" alt="Frame corner ornament"></figure>
+    <figure><figcaption>favicon.png — 32×32</figcaption><img src="./favicon.png" width="128" height="128" alt="Heart favicon"></figure>
+    <figure><figcaption>shoot-star.png — 32×8</figcaption><img src="./shoot-star.png" width="128" height="32" alt="Shooting star"></figure>
+  </main>
+</body>
+</html>
